@@ -1,0 +1,10 @@
+<mat-vertical-stepper class="ads-stepper"
+                      linear
+                      [selectedIndex]="selectedIndex"
+                      (selectionChange)="selectionChange($event)">
+    <ng-template matStepperIcon="edit" let-index="index">
+        {{index +1}}
+    </ng-template>
+    <mat-step *ngFor="let step of steps; let i = index" [label]="step.label">
+    </mat-step>
+</mat-vertical-stepper>

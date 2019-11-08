@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="stepper-container">
+		<stepper [steps]="steps" [selectedIndex]="selectedIndex" (onStepperChange)="onStepperChange($event)"></stepper>
+	</div>
+	<div id="text-container" #scrollContainer scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+		<div id="section{{i}}" *ngFor="let step of steps; let i = index" #sections>
+			<p>Section {{i}}</p>
+			<p>{{dummyText}}</p>
+			<p>{{dummyText}}</p>
+		</div>
+	</div>
+</div>
